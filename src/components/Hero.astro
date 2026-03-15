@@ -1,0 +1,129 @@
+---
+---
+
+<section
+  id="hero"
+  class="relative min-h-screen flex items-center overflow-hidden pt-16"
+  aria-label="Hero section"
+>
+  <!-- Animated background: geometric grid + gradient mesh -->
+  <div class="absolute inset-0 -z-10" aria-hidden="true">
+    <!-- Gradient mesh -->
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950"></div>
+    <!-- Top-left glow -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+    <!-- Bottom-right glow -->
+    <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-accent-700/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay:2s"></div>
+    <!-- Grid overlay -->
+    <div
+      class="absolute inset-0"
+      style="
+        background-image: linear-gradient(rgba(6,182,212,0.04) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(6,182,212,0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+      "
+    ></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+    <div class="max-w-3xl">
+      <!-- Experience badge -->
+      <div class="reveal mb-6 inline-flex items-center gap-2 px-4 py-1.5 bg-accent-500/10 border border-accent-500/20 rounded-full text-accent-400 text-sm font-medium">
+        <span class="w-2 h-2 rounded-full bg-accent-400 animate-pulse" aria-hidden="true"></span>
+        8+ Years of Experience
+      </div>
+
+      <!-- Headline -->
+      <h1 class="reveal reveal-delay-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-50 leading-tight tracking-tight mb-6">
+        Building reliable software<br />
+        <span class="text-accent-400">with .NET at the core</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="reveal reveal-delay-2 text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl">
+        Freelance Software Developer based in Sarajevo, Bosnia and Herzegovina
+        — specializing in backend systems, APIs, and full-stack .NET applications.
+      </p>
+
+      <!-- CTAs -->
+      <div class="reveal reveal-delay-3 flex flex-wrap gap-4">
+        <a
+          href="#projects"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-400 text-navy-950 font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-accent-500/25 hover:shadow-accent-400/30 hover:-translate-y-0.5"
+        >
+          View My Work
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-slate-100 font-semibold rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5"
+        >
+          Contact Me
+        </a>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="reveal reveal-delay-3 mt-14 flex flex-wrap gap-8">
+        {[
+          { value: '8+', label: 'Years Experience' },
+          { value: '6+', label: 'Companies' },
+          { value: '10+', label: 'Projects Delivered' },
+        ].map(({ value, label }) => (
+          <div>
+            <div class="text-3xl font-bold text-accent-400">{value}</div>
+            <div class="text-sm text-slate-500 mt-0.5">{label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-slate-600" aria-hidden="true">
+    <span class="text-xs">Scroll</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+</section>
+
+<style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.35s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  revealEls.forEach((el) => observer.observe(el));
+</script>

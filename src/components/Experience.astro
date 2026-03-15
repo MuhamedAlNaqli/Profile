@@ -1,0 +1,184 @@
+---
+interface Job {
+  company: string;
+  period: string;
+  role: string;
+  location?: string;
+  description?: string;
+  tech?: string[];
+  current?: boolean;
+}
+
+const jobs: Job[] = [
+  {
+    company: 'Smart Point',
+    period: '2024 — Present',
+    role: 'Software Developer (Freelance)',
+    location: 'Sarajevo, BiH',
+    current: true,
+  },
+  {
+    company: 'additiv',
+    period: '2022 — 2024',
+    role: 'Backend .NET Developer',
+    description:
+      'Worked on expanding and enhancing banking systems for a major UK bank. Responsibilities included planning, developing, testing and deploying new features and bug fixes.',
+    tech: ['C#', '.NET Core', 'SQL Server'],
+  },
+  {
+    company: 'Logosoft d.o.o.',
+    period: '2018 — 2022',
+    role: 'Software Developer',
+    description:
+      'Worked on multiple client projects including a telecom CRM platform (Austria & Switzerland markets), a pharmacy mobile app, a legal case management web app, and the company\'s internal website. Also managed Azure DevOps, CI/CD pipelines and team tasks.',
+    tech: ['C#', '.NET', 'Xamarin Forms', 'Azure DevOps', 'MS Dynamics CRM'],
+  },
+  {
+    company: 'CONFIG d.o.o.',
+    period: '2017 — 2018',
+    role: 'Software Developer',
+    description:
+      'Developed a Web API and WPF desktop application for the HORECA sector — enabling restaurants and catering businesses to manage orders, print bills, handle table reservations and manage shifts.',
+    tech: ['C#', '.NET', 'WPF', 'Web API'],
+  },
+  {
+    company: 'ZenDev AB',
+    period: '2017',
+    role: 'Software Developer',
+    description:
+      'Worked on eCommerce and web projects including a vehicle reservation system and a Magento 2 eCommerce platform.',
+    tech: ['PHP Laravel', 'MySQL', 'Magento 2'],
+  },
+  {
+    company: 'Authority Partners',
+    period: '2016 — 2017',
+    role: 'Intern',
+    description:
+      'Developed an Event Management System with multi-role user management, real-time notifications, and event registration features.',
+    tech: ['Angular 2', 'C# .NET Web API', 'MSSQL', 'SignalR'],
+  },
+];
+---
+
+<section
+  id="about"
+  class="py-20 lg:py-28"
+  aria-labelledby="experience-heading"
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="reveal text-center mb-16">
+      <span class="text-accent-400 text-sm font-semibold tracking-widest uppercase mb-3 block">
+        Track Record
+      </span>
+      <h2 id="experience-heading" class="text-3xl sm:text-4xl font-bold text-slate-50 mb-4">
+        Companies I've Worked With
+      </h2>
+      <p class="text-slate-400 max-w-xl mx-auto">
+        A track record across banking, telecom, pharma, and public sector
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Vertical line (desktop) -->
+      <div
+        class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-white/8 -translate-x-1/2"
+        aria-hidden="true"
+      ></div>
+
+      <ol class="flex flex-col gap-8" aria-label="Work experience timeline">
+        {jobs.map((job, i) => {
+          const isEven = i % 2 === 0;
+          return (
+            <li class={`reveal reveal-delay-${Math.min(i + 1, 5)} relative flex flex-col lg:flex-row items-start ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6`}>
+              <!-- Content card -->
+              <div class={`flex-1 ${isEven ? 'lg:pr-12' : 'lg:pl-12'}`}>
+                <article class="p-6 rounded-2xl bg-white/3 border border-white/8 hover:border-accent-500/25 transition-all duration-300">
+                  <!-- Header -->
+                  <div class="flex items-start justify-between gap-4 mb-3">
+                    <div>
+                      <h3 class="font-bold text-slate-100 text-lg">{job.company}</h3>
+                      <p class="text-accent-400 text-sm font-medium mt-0.5">{job.role}</p>
+                    </div>
+                    <div class="flex flex-col items-end gap-1.5 shrink-0">
+                      <span class="text-xs text-slate-500 font-medium">{job.period}</span>
+                      {job.current && (
+                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-accent-500/10 border border-accent-500/20 text-accent-400 text-xs font-medium">
+                          <span class="w-1.5 h-1.5 rounded-full bg-accent-400 animate-pulse" aria-hidden="true"></span>
+                          Active
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {job.location && (
+                    <p class="flex items-center gap-1 text-slate-500 text-sm mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      {job.location}
+                    </p>
+                  )}
+
+                  {job.description && (
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">{job.description}</p>
+                  )}
+
+                  {job.tech && (
+                    <ul class="flex flex-wrap gap-2" aria-label="Technologies used">
+                      {job.tech.map((t) => (
+                        <li>
+                          <span class="px-2.5 py-1 bg-white/5 border border-white/8 rounded-md text-xs text-slate-400 font-medium">
+                            {t}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              </div>
+
+              <!-- Timeline dot (desktop) -->
+              <div
+                class="hidden lg:flex absolute left-1/2 top-7 -translate-x-1/2 w-4 h-4 rounded-full bg-accent-500 border-4 border-navy-950 z-10"
+                aria-hidden="true"
+              ></div>
+
+              <!-- Spacer for alternating layout -->
+              <div class="flex-1 hidden lg:block"></div>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.05s; }
+  .reveal-delay-2 { transition-delay: 0.1s; }
+  .reveal-delay-3 { transition-delay: 0.15s; }
+  .reveal-delay-4 { transition-delay: 0.2s; }
+  .reveal-delay-5 { transition-delay: 0.25s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+
+<script>
+  const els = document.querySelectorAll('#about .reveal');
+  const obs = new IntersectionObserver(
+    (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
+    { threshold: 0.08 }
+  );
+  els.forEach((el) => obs.observe(el));
+</script>

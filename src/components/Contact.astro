@@ -1,0 +1,326 @@
+---
+---
+
+<section
+  id="contact"
+  class="py-20 lg:py-28 bg-navy-900/50"
+  aria-labelledby="contact-heading"
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="reveal text-center mb-14">
+      <span class="text-accent-400 text-sm font-semibold tracking-widest uppercase mb-3 block">
+        Get in Touch
+      </span>
+      <h2 id="contact-heading" class="text-3xl sm:text-4xl font-bold text-slate-50 mb-4">
+        Let's Work Together
+      </h2>
+      <p class="text-slate-400 max-w-xl mx-auto">
+        Have a project in mind? I'd love to hear about it.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+      <!-- Left: Contact info -->
+      <div class="reveal reveal-delay-1 flex flex-col gap-6">
+        <!-- Availability badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-accent-500/10 border border-accent-500/20 text-accent-400 text-sm font-medium w-fit">
+          <span class="w-2 h-2 rounded-full bg-accent-400 animate-pulse" aria-hidden="true"></span>
+          Available for freelance projects
+        </div>
+
+        <p class="text-slate-400 leading-relaxed">
+          I'm currently taking on new freelance projects. Whether you need a backend API,
+          a full-stack application, or help with an existing system — let's talk.
+        </p>
+
+        <ul class="flex flex-col gap-4" aria-label="Contact information">
+          <!-- Email -->
+          <li class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-400 shrink-0" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs text-slate-500 mb-0.5">Email</p>
+              <a
+                href="mailto:muhamed.alnaqli@gmail.com"
+                class="text-slate-200 hover:text-accent-400 transition-colors text-sm"
+              >
+                muhamed.alnaqli@gmail.com
+              </a>
+            </div>
+          </li>
+
+          <!-- LinkedIn -->
+          <li class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-400 shrink-0" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs text-slate-500 mb-0.5">LinkedIn</p>
+              <a
+                href="https://www.linkedin.com/in/muhamed-alnaqli-a3328630"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-slate-200 hover:text-accent-400 transition-colors text-sm"
+              >
+                linkedin.com/in/muhamed-alnaqli
+              </a>
+            </div>
+          </li>
+
+          <!-- Location -->
+          <li class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-400 shrink-0" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs text-slate-500 mb-0.5">Location</p>
+              <p class="text-slate-200 text-sm">Sarajevo, Bosnia and Herzegovina</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Contact form -->
+      <div class="reveal reveal-delay-2">
+        <form
+          id="contact-form"
+          class="flex flex-col gap-4"
+          novalidate
+          aria-label="Contact form"
+        >
+          <!-- Name -->
+          <div>
+            <label for="name" class="block text-sm text-slate-300 font-medium mb-1.5">
+              Name <span class="text-accent-400" aria-label="required">*</span>
+            </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              autocomplete="name"
+              placeholder="John Doe"
+              class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-slate-100 placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-accent-500/50 focus:border-accent-500/50 transition-all"
+            />
+            <p class="hidden mt-1 text-xs text-red-400" id="name-error" role="alert">Name is required.</p>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm text-slate-300 font-medium mb-1.5">
+              Email <span class="text-accent-400" aria-label="required">*</span>
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="john@example.com"
+              class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-slate-100 placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-accent-500/50 focus:border-accent-500/50 transition-all"
+            />
+            <p class="hidden mt-1 text-xs text-red-400" id="email-error" role="alert">Please enter a valid email.</p>
+          </div>
+
+          <!-- Subject -->
+          <div>
+            <label for="subject" class="block text-sm text-slate-300 font-medium mb-1.5">
+              Subject <span class="text-accent-400" aria-label="required">*</span>
+            </label>
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              required
+              placeholder="Project inquiry"
+              class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-slate-100 placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-accent-500/50 focus:border-accent-500/50 transition-all"
+            />
+            <p class="hidden mt-1 text-xs text-red-400" id="subject-error" role="alert">Subject is required.</p>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-sm text-slate-300 font-medium mb-1.5">
+              Message <span class="text-accent-400" aria-label="required">*</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="5"
+              minlength="20"
+              placeholder="Tell me about your project..."
+              class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-slate-100 placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-accent-500/50 focus:border-accent-500/50 transition-all resize-y min-h-[120px]"
+            ></textarea>
+            <p class="hidden mt-1 text-xs text-red-400" id="message-error" role="alert">Message must be at least 20 characters.</p>
+          </div>
+
+          <!-- Submit button -->
+          <button
+            id="submit-btn"
+            type="submit"
+            class="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-accent-500 hover:bg-accent-400 text-navy-950 font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-accent-500/20 disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            <span id="btn-text">Send Message</span>
+            <!-- Spinner (hidden by default) -->
+            <svg
+              id="btn-spinner"
+              class="hidden w-4 h-4 animate-spin"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+            </svg>
+          </button>
+
+          <!-- Success / Error messages -->
+          <div id="form-success" class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm" role="status" aria-live="polite">
+            Your message has been sent! I'll get back to you soon.
+          </div>
+          <div id="form-error" class="hidden p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm" role="alert" aria-live="assertive">
+            Something went wrong. Please try me directly at
+            <a href="mailto:muhamed.alnaqli@gmail.com" class="underline">muhamed.alnaqli@gmail.com</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // =====================================================================
+  // TODO: Replace these placeholder values with your actual EmailJS credentials.
+  // 1. Sign up at https://www.emailjs.com/
+  // 2. Create a service (Gmail) → get SERVICE_ID
+  // 3. Create an email template → get TEMPLATE_ID
+  // 4. Get your PUBLIC_KEY from Account > API Keys
+  // =====================================================================
+  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // TODO: replace
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // TODO: replace
+  const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // TODO: replace
+  // =====================================================================
+
+  const EMAILJS_CDN = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+
+  // Lazy-load EmailJS from CDN on first use — avoids race conditions with
+  // Astro's bundled module scripts (which run as type="module" / deferred).
+  function loadEmailJS(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      // Already loaded
+      if ((window as any).emailjs) { resolve(); return; }
+      const s = document.createElement('script');
+      s.src = EMAILJS_CDN;
+      s.onload = () => resolve();
+      s.onerror = () => reject(new Error('Failed to load EmailJS SDK'));
+      document.head.appendChild(s);
+    });
+  }
+
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const btnText = document.getElementById('btn-text') as HTMLSpanElement;
+  const btnSpinner = document.getElementById('btn-spinner') as HTMLElement;
+  const successMsg = document.getElementById('form-success') as HTMLElement;
+  const errorMsg = document.getElementById('form-error') as HTMLElement;
+
+  function setLoading(loading: boolean) {
+    submitBtn.disabled = loading;
+    btnText.textContent = loading ? 'Sending…' : 'Send Message';
+    btnSpinner.classList.toggle('hidden', !loading);
+  }
+
+  function showFieldError(id: string, show: boolean) {
+    const el = document.getElementById(id) as HTMLElement;
+    el.classList.toggle('hidden', !show);
+    const input = document.getElementById(id.replace('-error', '')) as HTMLInputElement | HTMLTextAreaElement;
+    if (show) {
+      input.classList.add('border-red-500/50');
+      input.setAttribute('aria-invalid', 'true');
+      input.setAttribute('aria-describedby', id);
+    } else {
+      input.classList.remove('border-red-500/50');
+      input.removeAttribute('aria-invalid');
+      input.removeAttribute('aria-describedby');
+    }
+  }
+
+  function validateForm(data: FormData): boolean {
+    const name    = (data.get('name')    as string || '').trim();
+    const email   = (data.get('email')   as string || '').trim();
+    const subject = (data.get('subject') as string || '').trim();
+    const message = (data.get('message') as string || '').trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    showFieldError('name-error',    !name);
+    showFieldError('email-error',   !email || !emailRegex.test(email));
+    showFieldError('subject-error', !subject);
+    showFieldError('message-error', message.length < 20);
+
+    return !!(name && email && emailRegex.test(email) && subject && message.length >= 20);
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    successMsg.classList.add('hidden');
+    errorMsg.classList.add('hidden');
+
+    const data = new FormData(form);
+    if (!validateForm(data)) return;
+
+    setLoading(true);
+    try {
+      await loadEmailJS();
+      const ejs = (window as any).emailjs;
+      ejs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+      await ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name:  (data.get('name')    as string).trim(),
+        from_email: (data.get('email')   as string).trim(),
+        subject:    (data.get('subject') as string).trim(),
+        message:    (data.get('message') as string).trim(),
+        reply_to:   (data.get('email')   as string).trim(),
+      });
+      successMsg.classList.remove('hidden');
+      form.reset();
+    } catch {
+      errorMsg.classList.remove('hidden');
+    } finally {
+      setLoading(false);
+    }
+  });
+</script>
+
+<style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+
+<script>
+  const els = document.querySelectorAll('#contact .reveal');
+  const obs = new IntersectionObserver(
+    (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
+    { threshold: 0.1 }
+  );
+  els.forEach((el) => obs.observe(el));
+</script>
